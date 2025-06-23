@@ -4,6 +4,7 @@ div[key="titulo"] {
     justify-content: center;
     align-items: center;
     height: 120px; /* ajuste a altura conforme desejar */
+    background: blue;
 }
 
 div[key="titulo"] h1.ng-binding {
