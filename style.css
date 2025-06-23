@@ -1,4 +1,11 @@
 /*Centralização do titulo*/
+div[key="titulo"] {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    height: 100%;            /* precisa de altura definida */
+}
+
 div[key="titulo"] h1.ng-binding {
     text-align: center;
     word-break: break-word;
