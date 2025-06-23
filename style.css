@@ -1,10 +1,4 @@
 /*Centralização do titulo*/
-/* Manter o row como está (Bootstrap controla a grid), só alinhar verticalmente o conteúdo das colunas */
-section.row > * {
-    display: flex;
-    align-items: center; /* centraliza verticalmente conteúdo das colunas */
-}
-
 /* Centralizar o título horizontal e verticalmente dentro da coluna do título */
 div[key="titulo"] {
     width: 100%;
