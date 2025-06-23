@@ -1,24 +1,19 @@
 /*Centralização do titulo*/
-/* Deixa a linha inteira flex horizontal e centraliza verticalmente */
-section.row {
+/* Manter o row como está (Bootstrap controla a grid), só alinhar verticalmente o conteúdo das colunas */
+section.row > * {
     display: flex;
-    align-items: center;
+    align-items: center; /* centraliza verticalmente conteúdo das colunas */
 }
 
-/* Para cada coluna (logo e título), tira o block padrão */
-section.row > .ng-scope {
-    display: flex;
-    align-items: center;
-}
-
-/* Agora centraliza o texto horizontalmente dentro de toda a linha */
+/* Centralizar o título horizontal e verticalmente dentro da coluna do título */
 div[key="titulo"] {
     width: 100%;
     display: flex;
-    justify-content: center; /* horizontal no bloco total */
-    align-items: center;     /* vertical no bloco total */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
 }
 
+/* Ajuste no h1 para evitar margens e garantir quebra de palavra */
 div[key="titulo"] h1.ng-binding {
     margin: 0;
     text-align: center;
