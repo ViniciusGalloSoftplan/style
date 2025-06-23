@@ -1,20 +1,27 @@
 /*Centralização do titulo*/
-/* Torna qualquer section.row flex horizontal com alinhamento vertical */
+/* Deixa a linha inteira flex horizontal e centraliza verticalmente */
 section.row {
     display: flex;
     align-items: center;
 }
 
-/* Garante que cada col-sm-X continue com sua largura definida */
+/* Para cada coluna (logo e título), tira o block padrão */
 section.row > .ng-scope {
     display: flex;
     align-items: center;
 }
 
-/* Garante o título centralizado dentro do col-sm-10 */
-div[key="titulo"] h1.ng-binding {
-    text-align: center;
+/* Agora centraliza o texto horizontalmente dentro de toda a linha */
+div[key="titulo"] {
     width: 100%;
+    display: flex;
+    justify-content: center; /* horizontal no bloco total */
+    align-items: center;     /* vertical no bloco total */
+}
+
+div[key="titulo"] h1.ng-binding {
+    margin: 0;
+    text-align: center;
     word-break: break-word;
     white-space: normal;
 }
