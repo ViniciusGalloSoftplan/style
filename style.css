@@ -1,12 +1,13 @@
 /*Centralização do titulo*/
-div[key="titulo"] {
+div.form-element.form-group.schema-form-title.schema-form-h1 {
     display: flex;
-    justify-content: center;  /* centraliza horizontalmente */
-    align-items: center;      /* centraliza verticalmente */
-    width: 100%;              /* ocupa toda largura do pai */
-    height: 100%;             /* ocupa toda altura do pai */
+    align-items: center; /* alinha o h1 verticalmente */
+    height: 100%;
 }
 
+div[key="titulo"] {
+    width: 100%;
+}
 
 div[key="titulo"] h1.ng-binding {
     text-align: center;
