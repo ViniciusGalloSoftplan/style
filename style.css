@@ -1,14 +1,17 @@
 /*Centralização do titulo*/
-div.form-element.form-group.schema-form-title.schema-form-h1 {
+/* Torna qualquer section.row flex horizontal com alinhamento vertical */
+section.row {
     display: flex;
-    align-items: center; /* alinha o h1 verticalmente */
-    height: 100%;
+    align-items: center;
 }
 
-div[key="titulo"] {
-    width: 100%;
+/* Garante que cada col-sm-X continue com sua largura definida */
+section.row > .ng-scope {
+    display: flex;
+    align-items: center;
 }
 
+/* Garante o título centralizado dentro do col-sm-10 */
 div[key="titulo"] h1.ng-binding {
     text-align: center;
     width: 100%;
