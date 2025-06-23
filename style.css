@@ -1,26 +1,15 @@
 /*Centralização do titulo*/
-.row.flex-center {
-  display: flex;
-  align-items: center; /* centraliza verticalmente */
+div[key="titulo"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.row.flex-center > * {
-  display: flex;
-  align-items: center; /* vertical dentro de cada coluna */
-}
-
-.row.flex-center [key="titulo"] {
-  flex: 1; /* ocupa todo o espaço restante */
-  display: flex;
-  justify-content: center; /* centraliza horizontal */
-  align-items: center;     /* centraliza vertical */
-}
-
-.row.flex-center [key="titulo"] h1.ng-binding {
-  margin: 0;
-  text-align: center;
-  word-break: break-word;
-  white-space: normal;
+div[key="titulo"] h1.ng-binding {
+    text-align: center;
+    word-break: break-word;
+    white-space: normal;
 }
 
 /* Estilização dos alertas */
