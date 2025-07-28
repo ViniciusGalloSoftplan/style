@@ -540,54 +540,67 @@ div.required label.control-label.preenchido::after {
 /*
 * Switche
 */
-/* Apenas checkboxes dentro do tiposBeneficios */
-div[key="art299"] input[type="checkbox"] {
-    width: 40px;
-    height: 20px;
+/* 1. Estrutura do switch */
+input[type="checkbox"] {
+    width: 29px;
+    height: 14px;
     appearance: none;
-    background-color: #c6c6c6;
-    border-radius: 20px;
+    background-color: #dfdfdf;
+    border-radius: 14px;
     position: relative;
     outline: none;
-    transition: background-color 0.3s, background 0.3s;
-    vertical-align: middle;
-    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+    margin: 0;
 }
 
-/* Botão deslizante */
-div[key="art299"] input[type="checkbox"]::before {
+/* 2. Botão deslizante */
+input[type="checkbox"]::before {
     content: "";
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 16px;
-    height: 16px;
-    background-color: white;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-color: #9e9e9e;
     border-radius: 50%;
-    transition: transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
-/* Aplicando o degradê quando marcado */
-div[key="art299"] input[type="checkbox"]:checked {
-    background: linear-gradient(45deg, #007bff, #00c6ff);
+/* 3. Quando marcado */
+input[type="checkbox"]:checked {
+    background-color: #a8d4ff;
+}
+input[type="checkbox"]:checked::before {
+    transform: translate(12px, -50%);
+    background-color: #339bff;
 }
 
-/* Animação do botão deslizante */
-div[key="art299"] input[type="checkbox"]:checked::before {
-    transform: translateX(20px);
+/* 4. Quando desabilitado */
+input[type="checkbox"]:disabled {
+    background-color: #e0e0e0 !important;
+    cursor: not-allowed;
+}
+input[type="checkbox"]:disabled::before {
+    background-color: #bdbdbd !important;
+    box-shadow: none;
 }
 
-/* Container principal (azul) */
-div.form-element[key="element_51460"] {
-    border-left: 4px solid #2196F3; /* Azul */
-    background-color: #E3F2FD; /* Azul claro */
-    color: #1565C0; /* Azul escuro */
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 4px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* 5. Corrigir sobreposição e alinhar texto */
+.schema-form-checkboxes .checkbox > label {
+    position: relative;
+    padding-left: 20px; /* dá espaço pro botão */
+    display: block;
+    line-height: 20px;
+}
+
+/* 6. Posicionar switch fixo à esquerda */
+.schema-form-checkboxes .checkbox > label input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
